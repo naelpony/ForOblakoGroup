@@ -20,7 +20,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { Date: '27 сен, 11:00', Name: 'Страхование с заботой о клиенте', Col: 20, Trener: '', Progress: '78%' },
   { Date: '27 сен, 11:00', Name: 'Страхование с заботой о клиенте', Col: 20, Trener: '', Progress: '78%' },
   { Date: '27 сен, 11:00', Name: 'Страхование с заботой о клиенте', Col: 20, Trener: '', Progress: '78%' },
-  
+  { Date: '27 сен, 11:00', Name: 'Страхование с заботой о клиенте', Col: 20, Trener: '', Progress: '78%' },
+
 ];
 @Component({
   selector: 'app-table',
