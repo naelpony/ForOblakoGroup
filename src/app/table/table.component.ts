@@ -30,7 +30,7 @@ export class TableComponent implements AfterViewInit, OnInit  {
   displayedColumns: string[] = ['Date', 'Name', 'Col', 'Trener', 'Progress', 'star'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
-  @ViewChild(MatSort, { static: false }) sort: MatSort;
+  @ViewChild(MatSort, { static: false }) sort!: MatSort;
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
