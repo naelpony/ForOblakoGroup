@@ -1,0 +1,85 @@
+
+.filter__search
+	display: flex
+	position: relative
+	& input
+		font-style: normal
+		font-weight: 500
+		font-size: 12px
+		line-height: 16px
+
+		color: rgba(0, 0, 0, 1)
+		&:focus
+			outline: none
+			& ~ label
+				top: -15px
+				font-style: normal
+				font-weight: 500
+				font-size: 12px
+				line-height: 12px
+
+				color: #1071FF
+		&:valid ~ label
+			top: -15px
+			font-style: normal
+			font-weight: 500
+			font-size: 12px
+			line-height: 12px
+			color: #1071FF
+	& button
+		width: 18px
+		height: 18px
+		border: none
+		background: no-repeat url('/assets/serach.svg') 
+	& label
+		font-style: normal
+		font-weight: 500
+		font-size: 12px
+		line-height: 16px
+		position: absolute
+		pointer-events: none
+		left: 30px
+		top: 0
+		transition: 0.2s ease all
+
+		color: rgba(0, 0, 0, 0.38)
+.bar
+	position: absolute
+	display: block
+	bottom: -10px
+	width: 100%
+	
+	transition: 0.2s ease all
+	&::before
+		content: ''
+		height: 1px
+		width: 0
+		bottom: 0
+		position: absolute
+		background: rgba(0, 0, 0, 0.38)
+		left: 50%
+	&::after
+		content: ''
+		height: 1px
+		width: 0
+		bottom: 0
+		position: absolute
+		background: rgba(0, 0, 0, 0.38)
+		right: 50%
+input:hover 
+	~ .bar::before,
+	~ .bar::after
+		
+		transition: 0.2s ease all
+		width: 50%
+input:focus 
+	~ .bar::before,
+	~ .bar::after
+		
+		transition: 0.2s ease all
+		width: 50%
+		height: 2px
+		background: #1071FF
+
+input[type="date"]::input-placeholder
+	visibility: hidden !important
