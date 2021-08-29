@@ -10,6 +10,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSortModule } from '@angular/material/sort';
+import { MatMenuModule } from '@angular/material/menu';
 // Components
 import { AppRoutingModule } from './app-routing.module';
 import { TabpanelComponent } from './tabpanel/tabpanel.component';
@@ -37,7 +38,8 @@ import { TableComponent } from './table/table.component';
     ReactiveFormsModule,
     MatTableModule,
     MatIconModule,
-    MatSortModule
+    MatSortModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -25,12 +25,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.sass']
 })
-export class TableComponent implements AfterViewInit, OnInit  {
+export class TableComponent implements AfterViewInit,  OnInit  {
 
   displayedColumns: string[] = ['Date', 'Name', 'Col', 'Trener', 'Progress', 'star'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
-  @ViewChild(MatSort, { static: false }) sort!: MatSort;
+  @ViewChild(MatSort) sort!: MatSort;
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;

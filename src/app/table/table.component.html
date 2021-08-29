@@ -1,22 +1,22 @@
-<table mat-table dataSource = "dataSource" matSort class="mat-elevation-z8">
-  <ng-container matColumnDef="Date" mat-sort-header>
-    <th mat-header-cell *matHeaderCellDef> Дата начала </th>
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z2">
+  <ng-container matColumnDef="Date" >
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Дата начала </th>
     <td mat-cell *matCellDef="let element"> {{element.Date}} </td>
   </ng-container>
-  <ng-container matColumnDef="Name" mat-sort-header>
-    <th mat-header-cell *matHeaderCellDef> Название </th>
+  <ng-container matColumnDef="Name" >
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Название </th>
     <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
   </ng-container>
-  <ng-container matColumnDef="Col" mat-sort-header>
-    <th mat-header-cell *matHeaderCellDef> Участников </th>
+  <ng-container matColumnDef="Col" >
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Участников </th>
     <td mat-cell *matCellDef="let element"> {{element.Col}} </td>
   </ng-container>
-  <ng-container matColumnDef="Trener" mat-sort-header>
-    <th mat-header-cell *matHeaderCellDef> Тренер </th>
+  <ng-container matColumnDef="Trener" >
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Тренер </th>
     <td mat-cell *matCellDef="let element"> {{element.Trener}} </td>
   </ng-container>
-	<ng-container matColumnDef="Progress" mat-sort-header>
-    <th mat-header-cell *matHeaderCellDef> Прогресс </th>
+	<ng-container matColumnDef="Progress" >
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Прогресс </th>
     <td mat-cell *matCellDef="let element">
 			<svg-icon src="/assets/progress.svg"></svg-icon>
 			{{element.Progress}} 
@@ -25,7 +25,19 @@
 	<ng-container matColumnDef="star" stickyEnd>
       <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let element">
-        <mat-icon>more_vert</mat-icon>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" yPosition="above" xPosition="before">
+          <button mat-menu-item>
+            <svg-icon src="/assets/pensil.svg" class="icon"></svg-icon>
+            <span>Редактировать</span>
+          </button>
+          <button mat-menu-item>
+            <svg-icon src="/assets/trash.svg" class="icon"></svg-icon>
+            <span>Удалить слот</span>
+          </button>
+        </mat-menu>
       </td>
     </ng-container>
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
