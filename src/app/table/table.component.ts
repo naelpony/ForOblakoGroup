@@ -18,6 +18,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { Date: '10 окт, 16:00', Name: 'Вторичное обучение КС', Col: 18, Trener: '', Progress: '86%' },
   { Date: '5 окт, 15:00', Name: 'Вклады: теория и практика', Col: 6, Trener: '', Progress: '69%' },
   { Date: '27 сен, 11:00', Name: 'Страхование с заботой о клиенте', Col: 20, Trener: '', Progress: '78%' },
+  { Date: '27 сен, 11:00', Name: 'Страхование с заботой о клиенте', Col: 20, Trener: '', Progress: '78%' },
 
 ];
 @Component({
