@@ -1,0 +1,261 @@
+.container
+	max-width: 1140px
+	margin: 0 auto
+	width: 100%
+.tabpanel
+	font-style: normal
+	font-weight: 500
+	font-size: 12px
+	line-height: 16px
+	padding: 0
+	margin: 0
+
+	color: rgba(0, 0, 0, 0.87)
+::ng-deep .mat-tab-labels > .mat-tab-label 
+	font-family: Montserrat 
+	padding: 0
+	margin: 42px 0 0 24px
+	font-style: normal
+	font-weight: 500
+	font-size: 12px 
+	line-height: 16px
+	color: rgba(0, 0, 0, 0.87)
+	min-width: 0
+	&:first-child
+		margin: 42px 0 0 0
+
+	
+::ng-deep .mat-ink-bar
+		background-color: #1071FF !important
+.filter
+	padding: 56px 0 0 0 
+	
+.filter__submit 
+	display: flex
+	align-items: flex-end
+	& form
+		padding: 0 30px 0 0
+
+.filter__search
+	display: flex
+	position: relative
+	& input
+		font-style: normal
+		font-weight: 500
+		font-size: 12px
+		line-height: 16px
+
+		color: rgba(0, 0, 0, 1)
+		&:focus
+			outline: none
+			& ~ label
+				top: -15px
+				font-style: normal
+				font-weight: 500
+				font-size: 12px
+				line-height: 12px
+
+				color: #1071FF
+		&:valid ~ label
+			top: -15px
+			font-style: normal
+			font-weight: 500
+			font-size: 12px
+			line-height: 12px
+			color: #1071FF
+	& button
+		width: 18px
+		height: 18px
+		border: none
+		background: no-repeat url('/assets/serach.svg') 
+	& label
+		font-style: normal
+		font-weight: 500
+		font-size: 12px
+		line-height: 16px
+		position: absolute
+		pointer-events: none
+		left: 30px
+		top: 0
+		transition: 0.2s ease all
+
+		color: rgba(0, 0, 0, 0.38)
+.bar
+	position: absolute
+	display: block
+	bottom: -10px
+	width: 100%
+	
+	transition: 0.2s ease all
+	&::before
+		content: ''
+		height: 1px
+		width: 0
+		bottom: 0
+		position: absolute
+		background: rgba(0, 0, 0, 0.38)
+		left: 50%
+	&::after
+		content: ''
+		height: 1px
+		width: 0
+		bottom: 0
+		position: absolute
+		background: rgba(0, 0, 0, 0.38)
+		right: 50%
+input:hover 
+	~ .bar::before,
+	~ .bar::after
+		
+		transition: 0.2s ease all
+		width: 50%
+input:focus 
+	~ .bar::before,
+	~ .bar::after
+		
+		transition: 0.2s ease all
+		width: 50%
+		height: 2px
+		background: #1071FF
+
+
+.filter__programs 
+	display: flex 
+	flex-direction: column
+	width: 166px
+	margin: 0 30px 0 0
+	& label
+		padding: 0 0 10px 3px  
+		font-style: normal
+		font-weight: 500
+		font-size: 10px
+		line-height: 12px
+
+		color: rgba(0, 0, 0, 0.54)
+.filter__period 
+	display: flex 
+	flex-direction: column
+	width: 166px
+	margin: 0 30px 0 0
+	& label
+		padding: 0 0 10px 3px 
+		font-style: normal
+		font-weight: 500
+		font-size: 10px
+		line-height: 12px
+		
+		color: rgba(0, 0, 0, 0.54)
+.filter__status 
+	display: flex 
+	flex-direction: column
+	width: 166px
+	margin: 0 30px 0 0
+	& label
+		padding: 0 0 10px 3px  
+		font-style: normal
+		font-weight: 500
+		font-size: 10px
+		line-height: 12px
+
+		color: rgba(0, 0, 0, 0.54)
+.filter__select
+	box-sizing: border-box
+	width: 166px
+	height: 24px
+	& select
+		width: 100%
+		outline: none
+
+	&:hover
+		border-bottom: 1px solid rgba(0, 0, 0, 0.38)
+
+
+.morefilter 
+	display: flex
+	align-items: center
+	padding: 36px 0 0 0
+	& p
+		padding: 0 95px 0 0
+		font-style: normal
+		font-weight: 500
+		font-size: 12px
+		line-height: 16px
+			
+		color: rgba(0, 0, 0, 0.54)
+.morefilter__option 
+	display: flex
+	justify-content: center
+	align-items: center
+	margin: 0 40px 0 0 
+	width: 180px
+	height: 36px
+	border: 2px solid rgba(16, 113, 255, 0)
+	border-radius: 24px
+	transition: 0.5s
+	color: rgba(16, 113, 255, 1)
+	& p
+		font-style: normal
+		font-weight: 600
+		font-size: 12px
+		line-height: 16px
+		padding: 0 0 0 8px
+
+		color: #1071FF
+	&:hover
+		width: 180px
+		height: 36px
+		border: 2px solid rgba(16, 113, 255, 0.04)
+		border-radius: 24px
+		background: rgba(16, 113, 255, 0.04)
+
+		transition: 0.5s
+	&:focus
+		width: 180px
+		height: 36px
+		border: 2px solid rgba(16, 113, 255, 0.12)
+		border-radius: 24px
+		background: rgba(16, 113, 255, 0.12)
+.morefilter__reset 
+	display: flex
+	align-items: center
+	width: 80px 
+	height: 36px
+	box-sizing: border-box
+	transition: 0.5s
+	& p
+		padding: 0
+		font-style: normal
+		font-weight: 600
+		font-size: 12px
+		line-height: 16px
+		color: rgba(0, 0, 0, 0.54)
+	&:hover
+		width: 80px 
+		border-bottom: 1px solid rgba(0, 0, 0, 0.54)
+		transition: 0.5s
+	
+.close
+	display: block
+	position: relative
+	margin: 0 10px 0 0
+	width: 9px
+	height: 9px
+	top: 4px
+	& span
+		&::after
+			position: absolute
+			content: ''
+			background: rgba(0, 0, 0, 0.54)	
+			left: 0
+			right: 0
+			height: 1px
+			transform: rotate(45deg)
+		&::before
+			position: absolute
+			content: ''
+			background: rgba(0, 0, 0, 0.54)	
+			left: 0
+			right: 0
+			height: 1px
+			transform: rotate(-45deg)
+	

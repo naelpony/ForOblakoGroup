@@ -1,0 +1,67 @@
+
+<div class="container">
+	<mat-tab-group [disableRipple]="true" class="tabpanel">
+		<mat-tab  label="Групповое" >
+			<div class="filter">
+				<div class="filter__submit">
+				<form action="search">
+						<div class="filter__search">
+							<button type="submit"></button>
+							<input type="search" required>
+							<span class="bar"></span>
+							<label>Поиск</label>
+						</div>
+					</form>
+					<div class="filter__programs">					
+						<label for="">Программа</label>
+						<div class="filter__select">
+							<select name="programs" id="prog">
+								<option value="" >Все</option>
+								<option value="">2</option>
+								<option value="">3</option>
+								<option value="">1</option>
+								<option value="">3</option>
+							</select>
+						</div>
+					</div>
+					<div class="filter__period">					
+						<label for="">Период</label>
+						<div class="filter__select">
+							<select name="period" id="per">
+								<option value="" >Июнь 2019</option>
+								<option value="">Июль 2019</option>
+								<option value="">Август 2019</option>
+								<option value="">Сентябрь 2019</option>
+								<option value="">Октябрь 2019</option>
+							</select>
+						</div>
+					</div>
+					<div class="filter__status">					
+						<label for="">Статус</label>
+						<div class="filter__select">
+							<select name="status" id="stat">
+								<option value="" >Все</option>
+								<option value="">Онлайн</option>
+								<option value="">Оффлайн</option>
+							</select>
+						</div>
+					</div> 
+				</div>
+				<div class="morefilter">
+					<p>34 сессии</p>
+					<button type="button" class="morefilter__option">
+						<svg-icon src="/assets/filter.svg"></svg-icon>
+						<p>Настроить фильтр</p>
+					</button>
+					<button type="reset" class="morefilter__reset">
+						<div class="close">
+							<span></span></div>
+						<p>Сбросить</p>
+					</button>
+				</div>
+			</div>
+			<app-table></app-table>		
+		</mat-tab> 
+		<mat-tab  label="Индивидуальное"></mat-tab>
+	</mat-tab-group>
+</div>
