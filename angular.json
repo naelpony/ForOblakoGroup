@@ -98,14 +98,26 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
+            "styles": [ 
               "src/styles.sass"
             ],
             "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }
     }
   },
-  "defaultProject": "ng-test"
+  "defaultProject": "ng-test",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

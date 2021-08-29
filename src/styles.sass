@@ -1,1 +1,83 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;500;700&display=swap')
+
+//Шрифт по умолчанию
+$fontfamily: 'Montserrat'
+//Размер шрифта по умолчанию
+$fontsize: 12
+
+//Переменные
+$minwidth: 360
+$mw: 1280
+$md1: $mw+12
+$md2: 992.98
+$md3: 767.98
+$md4: 479.98
+
+//Обнуление, общие параметры
+*
+	padding: 0px
+	margin: 0px
+	border: 0px
+*, *:before, *:active
+	box-sizing: border-box
+*:focus, :active, :focus
+	outline: none
+a:focus, a:active
+	outline: none
+nav, footer, header, aside, section
+	display: block
+html, body 
+	height: 100%
+	margin: 0px
+	padding: 0px
+	min-width: $minwidth+px
+	position: relative
+	width: 100%
+	color: #000
+body
+	font-size: 100%
+	line-height: 1
+	font-size: $fontsize
+	font-family: $fontfamily
+	&.lock
+		overflow: hidden
+		@media (max-width: $md3+px)
+			width: 100%
+			position: fixed
+			overflow: hidden
+input, button, textarea
+	font-family: $fontfamily
+input::-ms-clear
+	display: none
+button
+	cursor: pointer
+button::-moz-focus-inner
+	padding: 0
+	border: 0
+a, a:hover, a:visited
+	text-decoration: none
+ul, li
+	list-style: none
+img
+	vertical-align: top
+h1, h2, h3, h4, h5, h6
+	font-size: inherit
+	font-weight: inherit
+.container
+	max-width: $mw+px
+	margin: 0 auto
+	width: 100%
+	@media (max-width: $md1+px)		
+		max-width: 970px
+	@media (max-width: $md2+px)
+		max-width: 750px
+	@media (max-width: $md3+px)
+		max-width: none
+		padding: 0 10px
+.wrapper
+	width: 100%
+	min-height: 100%
+	overflow: hidden
+	&.loaded
+
+
