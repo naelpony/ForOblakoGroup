@@ -4,7 +4,10 @@
 		<p>Главные правила продаж  Тренинг</p>
 	</div>
 	<div class="card-option">
-		<nz-date-picker [(ngModel)]="date" (ngModelChange)="onChange($event)" placeholder=""></nz-date-picker>
-
+		<nz-date-picker [(ngModel)]="date" (ngModelChange)="onChange($event)" nzPlaceHolder="Дата" nzFormat="d MMMM"></nz-date-picker>
+		<nz-time-picker [(ngModel)]="time" nzFormat="HH:mm" nzPlaceHolder="Время"></nz-time-picker>
 	</div>
 </div>
+
+
+						

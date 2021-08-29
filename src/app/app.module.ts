@@ -27,6 +27,7 @@ import { registerLocaleData } from '@angular/common';
 import ru from '@angular/common/locales/ru';
 
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { NzTimePickerModule } from 'ng-zorro-antd/time-picker';
 
 registerLocaleData(ru);
 
@@ -60,7 +61,8 @@ registerLocaleData(ru);
     MatSidenavModule,
     MatDatepickerModule,
     MatInputModule,
-    NzDatePickerModule
+    NzDatePickerModule,
+    NzTimePickerModule
   ],
   providers: [{ provide: NZ_I18N, useValue: ru_RU }],
   bootstrap: [AppComponent]
