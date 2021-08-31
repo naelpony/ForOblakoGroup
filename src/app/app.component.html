@@ -1,44 +1,56 @@
-<mat-drawer-container class="example-container" autosize>
+<mat-drawer-container class="example-container"  hasBackdrop="true">
   <mat-drawer #drawer class="example-sidenav" mode="over" position="end">
     <div class="header-label">
       <h1>Планирование</h1>
+      <div class="button">
+        <button type="submit" mat-button (click)="drawer.toggle()"> 
+        <svg-icon src="/assets/acceps.svg"></svg-icon>
+      </button>
       <button type="submit" mat-button (click)="drawer.toggle()"> 
-      <svg-icon src="/assets/acceps.svg"></svg-icon>
-    </button>
-    <button type="submit" mat-button (click)="drawer.toggle()"> 
-      <div class="close">
-				<span></span>
-			</div>
-		</button>
+        <div class="close">
+          <span></span>
+        </div>
+      </button>
+      </div>
     </div>
     
     
-    <mat-tab-group [disableRipple]="true" class="tabpanel">
-      <mat-tab  label="Групповое" >
+    <mat-tab-group disableRipple="true" class="tabpanel">
+      <mat-tab  label="Основное" class="tabpanel-panel">
+      <div class="sidenav-programs">					
+				<label>Программа</label>
+					<div class="sidenav__select">
+            <nz-select nzShowSearch nzAllowClear nzBorderless selectedValue ='null'>
+              <nz-option nzLabel="Страхование с заботой о клиенте" nzValue="1"></nz-option>
+              <nz-option nzLabel="Страхование с заботой о клиенте" nzValue="2"></nz-option>
+            </nz-select>
+          </div>
+        </div>
         <app-card></app-card>
+        <app-radiobtn></app-radiobtn>
       </mat-tab>
-      <mat-tab  label="Индивидуальное">
-
+      <mat-tab  label="Участники" class="tabpanel-panel">
+        <app-dragdrop></app-dragdrop>
       </mat-tab>
     </mat-tab-group>
   </mat-drawer>
-
-  <div class="example-sidenav-content">
-    
-
-
-    <button type="button" class="header__schedule"  mat-button (click)="drawer.toggle()">
-      <div class="header__plus">
-        <span></span>
+  <div class="wrapper">
+    <div class="container">
+      <div class="example-sidenav-content">
+        <div class="header-sidenav">
+          <div class="header__berger">			
+            <span></span>
+          </div>
+          <button type="button" class="header__schedule"  mat-button (click)="drawer.toggle()">
+            <div class="header__plus">
+              <span></span>
+            </div>
+            <p>Запланировать</p>
+          </button>
+        </div>
+        <app-menu></app-menu>
+        <app-tabpanel></app-tabpanel>
       </div>
-      <p>Запланировать</p>
-    </button>
-    <app-menu></app-menu>
-    <app-tabpanel></app-tabpanel>
+    </div>
   </div>
-
-</mat-drawer-container>
-
-
-
-      <app-card></app-card> 
+</mat-drawer-container> 

@@ -8,8 +8,15 @@ import { NzI18nService } from 'ng-zorro-antd/i18n';
   
 })
 export class CardComponent implements OnInit {
-  time = null;
-  date = null;
+  time1 = null;
+  time2 =null;
+  time3 = null;
+  date1 = null;
+  date2 = null;
+  date3 = null;
+  disabled1 = false;
+  disabled2 = true;
+  disabled3 = true;
   constructor(private i18n: NzI18nService) { }
 
   onChange(result: Date): void {

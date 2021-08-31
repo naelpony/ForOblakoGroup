@@ -3,7 +3,7 @@
 		<mat-tab  label="Групповое" >
 			<div class="filter">
 				<div class="filter__submit">
-				<form action="search">
+					<form action="search">
 						<div class="filter__search">
 							<button type="submit"></button>
 							<input type="search" required>
@@ -14,35 +14,28 @@
 					<div class="filter__programs">					
 						<label for="">Программа</label>
 						<div class="filter__select">
-							<select name="programs" id="prog">
-								<option value="" >Все</option>
-								<option value="">2</option>
-								<option value="">3</option>
-								<option value="">1</option>
-								<option value="">3</option>
-							</select>
+							<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue ='null' class="svg">
+								<nz-option nzLabel="Все" nzValue="1"></nz-option>
+								<nz-option nzLabel="2" nzValue="2"></nz-option>
+								<nz-option nzLabel="1" nzValue="3"></nz-option>
+								<nz-option nzLabel="3" nzValue="4"></nz-option>
+							</nz-select>
 						</div>
 					</div>
-					<div class="filter__period">					
-						<label for="">Период</label>
+					<div class="filter__period">
+						<label for="">Период</label>	
 						<div class="filter__select">
-							<select name="period" id="per">
-								<option value="" >Июнь 2019</option>
-								<option value="">Июль 2019</option>
-								<option value="">Август 2019</option>
-								<option value="">Сентябрь 2019</option>
-								<option value="">Октябрь 2019</option>
-							</select>
+							<nz-date-picker [(ngModel)]="date" (ngModelChange)="onChange($event)" nzPlaceHolder=" " nzFormat="MMMM y"></nz-date-picker>
 						</div>
 					</div>
 					<div class="filter__status">					
-						<label for="">Статус</label>
+						<label for="">Программа</label>
 						<div class="filter__select">
-							<select name="status" id="stat">
-								<option value="" >Все</option>
-								<option value="">Онлайн</option>
-								<option value="">Оффлайн</option>
-							</select>
+							<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue ='null' class="svg">
+								<nz-option nzLabel="Все" nzValue="1"></nz-option>
+								<nz-option nzLabel="Онлайн" nzValue="2"></nz-option>
+								<nz-option nzLabel="Оффлайн" nzValue="3"></nz-option>
+							</nz-select>
 						</div>
 					</div> 
 				</div>
@@ -62,6 +55,60 @@
 			</div>
 			<app-table></app-table>		
 		</mat-tab> 
-		<mat-tab  label="Индивидуальное"></mat-tab>
+		<mat-tab  label="Индивидуальное">
+			<div class="filter">
+				<div class="filter__submit">
+					<form action="search">
+						<div class="filter__search">
+							<button type="submit"></button>
+							<input type="search" required>
+							<span class="bar"></span>
+							<label>Поиск</label>
+						</div>
+					</form>
+					<div class="filter__programs">					
+						<label for="">Программа</label>
+						<div class="filter__select">
+							<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue ='null' class="svg">
+								<nz-option nzLabel="Все" nzValue="1"></nz-option>
+								<nz-option nzLabel="2" nzValue="2"></nz-option>
+								<nz-option nzLabel="1" nzValue="3"></nz-option>
+								<nz-option nzLabel="3" nzValue="4"></nz-option>
+							</nz-select>
+						</div>
+					</div>
+					<div class="filter__period">
+						<label for="">Период</label>	
+						<div class="filter__select">
+							<nz-date-picker [(ngModel)]="date" (ngModelChange)="onChange($event)" nzPlaceHolder=" " nzFormat="MMMM y"></nz-date-picker>
+						</div>
+					</div>
+					<div class="filter__status">					
+						<label for="">Программа</label>
+						<div class="filter__select">
+							<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue ='null' class="svg">
+								<nz-option nzLabel="Все" nzValue="1"></nz-option>
+								<nz-option nzLabel="Онлайн" nzValue="2"></nz-option>
+								<nz-option nzLabel="Оффлайн" nzValue="3"></nz-option>
+							</nz-select>
+						</div>
+					</div> 
+				</div>
+				<div class="morefilter">
+					<p>34 сессии</p>
+					<button type="button" class="morefilter__option">
+						<svg-icon src="/assets/filter.svg"></svg-icon>
+						<p>Настроить фильтр</p>
+					</button>
+					<button type="reset" class="morefilter__reset">
+						<div class="close">
+							<span></span>
+						</div>
+						<p>Сбросить</p>
+					</button>
+				</div>
+			</div>
+			<app-table></app-table>
+		</mat-tab>
 	</mat-tab-group>
 </div>

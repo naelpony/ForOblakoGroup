@@ -38,7 +38,7 @@ html, body
 body
 	font-size: 100%
 	line-height: 1
-	font-size: $fontsize
+	font-size: $fontsize !important
 	font-family: $fontfamily
 	&.lock
 		overflow: hidden
@@ -47,7 +47,7 @@ body
 			position: fixed
 			overflow: hidden
 input, button, textarea
-	font-family: $fontfamily
+	font-family: $fontfamily 
 input::-ms-clear
 	display: none
 button
@@ -112,6 +112,16 @@ address, dl, ol, p, pre, ul
 	max-width: 100%
 	max-height: 100%
 
+.mat-drawer 
+	& .mat-tab-body-content
+		height: 760px !important
+
+
+
+.mat-menu-content 
+	background-color: #fff !important
+	padding: 0
+	margin: 0
 .mat-menu-panel 
 	min-width: 112px
 	max-width: 280px
@@ -131,6 +141,22 @@ address, dl, ol, p, pre, ul
 	color: rgba(0, 0, 0, 0.87)
 	& span
 		padding: 0 0 0 20px
+.ng-tns-c131-10
+	& .mat-menu-item
+		display: flex
+		justify-content: space-between
+		align-items: center
+		line-height: 16px
+		height: 35px
+		padding: 0 15px	
+		margin: 0
+		&:first-child
+			padding: 15px 15px 0 15px
+		&:last-child
+			padding: 0 15px 15px 15px
+	& span
+		margin: 0
+		padding: 0
 .icon
 	position: relative
 	top: 2px
@@ -139,4 +165,61 @@ address, dl, ol, p, pre, ul
 
 	width: 100%
 
+.ng-tns-c219-2, .ng-tns-c214-3,
+.ng-tns-c219-5, .ng-tns-c214-6, .ng-tns-c219-16,
+.ng-tns-c219-8, .ng-tns-c214-9, .ng-tns-c219-19
+	
+	padding: 0
+	& svg
+		opacity: 0 !important
+	& input
+		width: 100%
+.ant-picker
+	width: 200px
 
+
+.mat-drawer-transition, .mat-drawer-backdrop
+	background: #fff
+.mat-tab-label-content
+	font-family: Montserrat
+	font-style: normal
+	font-weight: 500
+	font-size: 12px
+	line-height: 16px
+		
+.mat-tab-label-active
+	opacity: 0.87 !important
+
+.ant-radio-wrapper 
+	font-family: Montserrat
+	font-style: normal
+	font-weight: 500
+	font-size: 12px
+	line-height: 16px
+
+	color: rgba(0, 0, 0, 0.54)
+	
+.ant-radio-wrapper-checked
+	font-family: Montserrat
+	font-style: normal
+	font-weight: 500
+	font-size: 12px
+	line-height: 16px
+
+	color: rgba(0, 0, 0, 0.87)
+.ant-radio-checked::after,
+.ant-radio-inner::after 
+	background-color: #1071FF !important
+
+
+.ant-select:not(.ant-select-customize-input), .ant-select-selector, 
+.dragdrop-section, .ant-select-single:not(.ant-select-customize-input),
+.ant-select-selection-placeholder
+	padding: 0 !important
+	margin: 0
+	width: 100%
+.svg
+	& svg
+		color: rgba(0, 0, 0, 0.38)
+		width: 11px
+		height: 7px

@@ -1,0 +1,106 @@
+<div cdkDropListGroup class="dragdrop">
+  <div class="example-container">
+		<h2>Доступные участники</h2>
+		<div class="dragdrop-container">
+			<div class="container__search">
+				<form action="search">
+					<div class="search">
+						<button type="submit"></button>
+						<input type="search" required>
+						<span class="bar"></span>
+						<label>Поиск</label>
+					</div>
+				</form>
+			</div>
+			<div class="dragdrop-section">					
+				<label class="dragdrop-label">Группа</label>
+				<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue ='null' class="svg">
+					<nz-option nzLabel="Администрирование" nzValue="1"></nz-option>
+					<nz-option nzLabel="Администрирование" nzValue="2"></nz-option>
+					<nz-option nzLabel="Администрирование" nzValue="3"></nz-option>
+				</nz-select>
+			</div>
+		</div>
+		<div class="dragdrop-container">
+			<div class="dragdrop-section">					
+				<label class="dragdrop-label">Должность</label>
+				<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue ='null' class="svg">
+					<nz-option nzLabel="Менеджер по персоналу" nzValue="1"></nz-option>
+					<nz-option nzLabel="Менеджер по персоналу" nzValue="2"></nz-option>
+					<nz-option nzLabel="Менеджер по персоналу" nzValue="3"></nz-option>
+				</nz-select>
+			</div>
+			<div class="dragdrop-section">					
+				<label class="dragdrop-label">Стаж</label>
+				<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue ='null' class="svg">
+					<nz-option nzLabel="1 - 2 года" nzValue="1"></nz-option>
+					<nz-option nzLabel="3 – 10 лет" nzValue="2"></nz-option>
+					<nz-option nzLabel="Больше 10" nzValue="3"></nz-option>
+				</nz-select>
+			</div>
+		</div>
+		<div class="dragdrop-filter">
+			<p>34 сессии</p>
+			<button type="button" class="dragdrop__option" [matMenuTriggerFor]="menu">
+				<svg-icon src="/assets/filter.svg"></svg-icon>
+				<p>Настроить</p>
+			</button>
+			<mat-menu #menu="matMenu" yPosition="below" >
+				<div class="filter__bg">
+					<div mat-menu-item disabled >
+						<h1>Системные поля</h1>
+					</div>
+					<div mat-menu-item>
+						<p>Поиск</p>
+						<svg-icon src="/assets/acceps.svg"></svg-icon>
+					</div>
+					<div mat-menu-item>
+						<p>Группа</p>
+						<svg-icon src="/assets/acceps.svg"></svg-icon>
+					</div>
+					<div mat-menu-item>
+						<p>Должность</p>
+						<svg-icon src="/assets/acceps.svg"></svg-icon>
+					</div>
+					<div mat-menu-item>
+						<p>Стаж</p>
+						<svg-icon src="/assets/acceps.svg"></svg-icon>
+					</div>
+					<div mat-menu-item disabled>
+						<h1>Дополнительные поля</h1>
+					</div>
+					<div mat-menu-item>
+						<span>Подразделение</span>
+					</div>
+					<div mat-menu-item>
+						<span>Округ</span>
+					</div>
+					<div mat-menu-item>
+						<span>Город</span>
+					</div>
+				</div>
+      </mat-menu>
+			<button type="reset" class="dragdrop__reset">
+				<div class="close">
+					<span></span>
+				</div>
+				<p>Сбросить</p>
+			</button>
+		</div>
+		<div class="dragdrop__lable"> <label>Все пользователи</label></div>
+		
+		<div cdkDropList [cdkDropListData]="todo" class="example-list" (cdkDropListDropped)="drop($event)">
+  	  <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+		</div>
+	</div>
+
+
+
+	<div class="example-container">
+	<h2>Участники мероприятия</h2>
+	<div class="dragdrop__lable"><label>Все пользователи</label></div>
+		<div cdkDropList [cdkDropListData]="done" class="example-list" (cdkDropListDropped)="drop($event)">
+			<div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+		</div>
+	</div>
+</div>

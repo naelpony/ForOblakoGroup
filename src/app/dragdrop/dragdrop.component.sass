@@ -1,44 +1,31 @@
-.container
-	max-width: 1140px
-	margin: 0 auto
-	width: 100%
-.tabpanel
-	font-style: normal
-	font-weight: 500
-	font-size: 12px
-	line-height: 16px
-	padding: 0
-	margin: 0
-
-	color: rgba(0, 0, 0, 0.87)
-::ng-deep .mat-tab-labels > .mat-tab-label 
-	font-family: Montserrat 
-	padding: 0
-	margin: 42px 0 0 24px
-	font-style: normal
-	font-weight: 500
-	font-size: 12px 
-	line-height: 16px
-	color: rgba(0, 0, 0, 0.87)
-	min-width: 0
-	&:first-child
-		margin: 42px 0 0 0
-
-	
-::ng-deep .mat-ink-bar
-		background-color: #1071FF !important
-.filter
-	padding: 56px 0 0 0 
-	
-.filter__submit 
+.dragdrop
 	display: flex
-	align-items: flex-end
-	& form
-		padding: 0 30px 0 0
+	padding: 35px 0 0 0
 
-.filter__search
+.example-container 
+	width: 400px
+	max-width: 100%
+	margin: 0 25px 25px 0
+	display: inline-block
+	vertical-align: top
+	height: 100%
+	& h2
+		font-weight: bold
+		font-size: 14px
+		line-height: 18px
+
+		color: rgba(0, 0, 0, 0.87)
+
+.dragdrop-container
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 10px 0 0 0
+
+.search
 	display: flex
 	position: relative
+	widows: 180px
 	& input
 		font-style: normal
 		font-weight: 500
@@ -119,86 +106,41 @@ input:focus
 		background: #1071FF
 
 
-.filter__programs 
-	display: flex 
-	flex-direction: column
-	width: 166px
-	margin: 0 30px 0 0
-	& label
-		padding: 0 0 10px 3px  
-		font-style: normal
-		font-weight: 500
-		font-size: 10px
-		line-height: 12px
 
-		color: rgba(0, 0, 0, 0.54)
-.filter__period 
-	display: flex 
-	flex-direction: column
-	width: 166px
-	margin: 0 30px 0 0
-	& label
-		padding: 0 0 10px 3px 
-		font-style: normal
-		font-weight: 500
-		font-size: 10px
-		line-height: 12px
-		
-		color: rgba(0, 0, 0, 0.54)
-.filter__status 
-	display: flex 
-	flex-direction: column
-	width: 166px
-	margin: 0 30px 0 0
-	& label
-		padding: 0 0 10px 3px  
-		font-style: normal
-		font-weight: 500
-		font-size: 10px
-		line-height: 12px
-
-		color: rgba(0, 0, 0, 0.54)
-.filter__select
+.dragdrop-section
 	box-sizing: border-box
-	width: 166px
-	height: 24px
-	transition: 0.2s ease all
-	& select
-		width: 100%
-		outline: none
-		transition: 0.2s ease all
+	height: 50px
 	&:hover
-		box-shadow: none
-		border-bottom: 1px solid rgba(0, 0, 0, 0.87) 
-.ant-picker
-	border: 0 
-	outline: none
-	&:hover		
-		transition: 1s ease all
-		border: 0 
-		outline: none
+		box-sizing: border-box
+		border-bottom: 1px solid rgba(0, 0, 0, 0.38)
+.dragdrop-label 
+	font-style: normal
+	font-weight: 500
+	font-size: 10px
+	line-height: 12px
+	padding: 0 0 5px 30px
 
-.ant-picker-focused
-	box-shadow: none
+	color: rgba(0, 0, 0, 0.54)
 
-.morefilter 
+
+
+
+.dragdrop-filter
 	display: flex
 	align-items: center
-	padding: 36px 0 0 0
+	justify-content: space-between
+	padding:0
 	& p
-		padding: 0 95px 0 0
 		font-style: normal
 		font-weight: 500
 		font-size: 12px
 		line-height: 16px
 			
 		color: rgba(0, 0, 0, 0.54)
-.morefilter__option 
+.dragdrop__option 
 	display: flex
 	justify-content: center
 	align-items: center
-	margin: 0 40px 0 0 
-	width: 180px
 	height: 36px
 	border: 2px solid rgba(16, 113, 255, 0)
 	border-radius: 24px
@@ -219,39 +161,35 @@ input:focus
 		border-radius: 24px
 		background: rgba(16, 113, 255, 0.04)
 
-		transition: 0.5s
-	&:focus
-		width: 180px
-		height: 36px
-		border: 2px solid rgba(16, 113, 255, 0.12)
-		border-radius: 24px
-		background: rgba(16, 113, 255, 0.12)
-.morefilter__reset 
-	display: flex
-	align-items: center
-	width: 80px 
-	height: 36px
-	box-sizing: border-box
-	transition: 0.5s
+
+.filter__bg
+	& h1
+		font-weight: 500
+		font-size: 10px
+		line-height: 12px
+
+		color: rgba(0, 0, 0, 0.54)
 	& p
-		padding: 0
-		font-style: normal
-		font-weight: 600
+		font-weight: 500
 		font-size: 12px
 		line-height: 16px
-		color: rgba(0, 0, 0, 0.54)
-	&:hover
-		width: 80px 
-		border-bottom: 1px solid rgba(0, 0, 0, 0.54)
-		transition: 0.5s
-	
+
+		color: #1071FF
+	& span
+		font-weight: 500
+		font-size: 12px
+		line-height: 16px
+
+		color: rgba(0, 0, 0, 0.87)
+.dragdrop__reset
+	display: flex
 .close
 	display: block
 	position: relative
 	margin: 0 10px 0 0
 	width: 9px
 	height: 9px
-	top: 4px
+	top: 8px
 	& span
 		&::after
 			position: absolute
@@ -269,4 +207,58 @@ input:focus
 			right: 0
 			height: 1px
 			transform: rotate(-45deg)
+.dragdrop__lable
+	font-weight: 500
+	font-size: 12px
+	line-height: 16px
+	margin: 25px 0 10px 50px
+
+	color: rgba(0, 0, 0, 0.87)
+
+
+.example-list 
 	
+	min-height: 60px
+	background: white
+	overflow: hidden
+	display: block
+
+
+.example-box 
+	padding: 10px 85px
+	color: rgba(0, 0, 0, 0.87)
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: space-between
+	box-sizing: border-box
+	cursor: move
+	background: white
+	font-weight: 500
+	font-size: 12px
+	line-height: 16px
+
+	color: rgba(0, 0, 0, 0.87)
+
+
+.cdk-drag-preview 
+	box-sizing: border-box
+	border-radius: 4px
+	box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2)
+
+
+.cdk-drag-placeholder 
+	opacity: 0
+
+
+.cdk-drag-animating 
+	transition: transform 250ms cubic-bezier(0, 0, 0.2, 1)
+
+
+.example-box:last-child 
+	border: none
+
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) 
+	transition: transform 250ms cubic-bezier(0, 0, 0.2, 1)
+

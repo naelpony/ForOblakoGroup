@@ -13,7 +13,11 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatInputModule } from '@angular/material/input'
+import { MatInputModule } from '@angular/material/input';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzSwitchModule } from 'ng-zorro-antd/switch';
 // Components
 import { AppRoutingModule } from './app-routing.module';
 import { TabpanelComponent } from './tabpanel/tabpanel.component';
@@ -28,6 +32,10 @@ import ru from '@angular/common/locales/ru';
 
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzTimePickerModule } from 'ng-zorro-antd/time-picker';
+import { RadiobtnComponent } from './radiobtn/radiobtn.component';
+import { DragdropComponent } from './dragdrop/dragdrop.component';
+
+
 
 registerLocaleData(ru);
 
@@ -41,6 +49,8 @@ registerLocaleData(ru);
     TabpanelComponent,
     TableComponent,
     CardComponent,
+    RadiobtnComponent,
+    DragdropComponent,
     
   ],
   imports: [
@@ -62,7 +72,12 @@ registerLocaleData(ru);
     MatDatepickerModule,
     MatInputModule,
     NzDatePickerModule,
-    NzTimePickerModule
+    NzTimePickerModule,
+    NzRadioModule,
+    DragDropModule,
+    NzSelectModule,
+    NzSwitchModule
+
   ],
   providers: [{ provide: NZ_I18N, useValue: ru_RU }],
   bootstrap: [AppComponent]
