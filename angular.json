@@ -101,7 +101,8 @@
             ],
             "styles": [ 
               "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
-              "src/styles.sass"
+              "src/styles.sass",
+              "src/media.sass"
             ],
             "scripts": []
           }

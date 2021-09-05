@@ -164,3 +164,36 @@
 	&:hover
 		transition: 0.2s ease all
 		border-bottom: 1px solid rgba(0, 0, 0, 0.38)
+.sidenav___lessons
+	display: none
+
+@media (max-width: 480px) 
+	.header-sidenav
+		display: flex
+		align-items: center
+		padding: 35px 16px 11px 16px
+	.header__schedule
+		width: 40px
+		&:hover
+			width: 40px
+			border: 0px
+			background: #fff
+		&:focus
+			width: 40px
+			border: 0px
+			background: #fff
+		& p
+			display: none
+	.header__plus
+		width: 15px
+		height: auto
+		right: 10px
+		padding: 0
+		margin: 0
+	.sidenav___lessons
+		display: block
+		font-weight: bold
+		font-size: 14px
+		line-height: 18px
+
+		color: rgba(0, 0, 0, 0.87)

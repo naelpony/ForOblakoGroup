@@ -2,7 +2,28 @@ table
 	width: 100%
 	border: 0
 	margin: 50px 0 0 0 !important
+.pww
+	display: none
 th.mat-header-cell, td.mat-cell, td.mat-footer-cell
 	border: 0
 th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type
 	padding: 0
+@media (max-width: 480px) 
+	th.mat-header-cell
+		font-size: 10px
+		line-height: 12px
+		margin: 0
+		padding: 0
+
+		color: rgba(0, 0, 0, 0.54)
+	td.mat-cell, td.mat-footer-cell
+		font-size: 12px
+		line-height: 16px
+
+		color: rgba(0, 0, 0, 0.87)
+	.cdk-column-star, .cdk-column-Trener
+		display: none
+	.pw
+		display: none
+	.pww
+		display: block

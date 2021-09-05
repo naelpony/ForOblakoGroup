@@ -10,14 +10,11 @@
 		</div>
 		
 		<div class="card-content">
-			<div class="card-switcher">
-				<nz-switch [(ngModel)]="disabled1" nzSize="small"></nz-switch>
-			</div>
 			<div class="card-section">
 				<label class="card-label">Дата</label>
 				<div class="card-section__svg">
 					<svg-icon src="/assets/date.svg"></svg-icon>
-					<nz-date-picker [(ngModel)]="date1" (ngModelChange)="onChange($event)" nzPlaceHolder="Дата" nzFormat="d MMMM" [nzDisabled]="disabled1"></nz-date-picker>
+					<nz-date-picker [(ngModel)]="date1" (ngModelChange)="onChange($event)" nzPlaceHolder="Дата" nzFormat="d MMMM"></nz-date-picker>
 				</div> 
 			</div>
 			<div class="card-section">
@@ -46,9 +43,6 @@
 			<p>Тренинг</p>
 		</div>
 		<div class="card-content">
-			<div class="card-switcher">
-				<nz-switch [(ngModel)]="disabled3" nzSize="small"></nz-switch>
-			</div>
 			<div class="card-section">
 				<label class="card-label">Дата</label>
 				<div class="card-section__svg">
@@ -81,9 +75,6 @@
 				<p>Тренинг</p>
 			</div>
 			<div class="card-content">
-				<div class="card-switcher">
-				<nz-switch [(ngModel)]="disabled2" nzSize="small"></nz-switch>
-			</div>
 				<div class="card-section">
 					<label class="card-label">Дата</label>
 					<div class="card-section__svg">
