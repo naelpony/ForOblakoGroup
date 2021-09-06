@@ -8,43 +8,47 @@
 			<h1>Главные правила продаж</h1>
 			<p>Тренинг</p>
 		</div>
-		
+
 		<div class="card-content">
 			<div class="card-section">
 				<label class="card-label">Дата</label>
 				<div class="card-section__svg">
 					<svg-icon src="/assets/date.svg"></svg-icon>
-					<nz-date-picker [(ngModel)]="date1" (ngModelChange)="onChange($event)" nzPlaceHolder="Дата" nzFormat="d MMMM"></nz-date-picker>
-				</div> 
+					<nz-date-picker [(ngModel)]="date1" (ngModelChange)="onChange($event)" nzPlaceHolder="Дата" nzFormat="d MMMM">
+					</nz-date-picker>
+				</div>
 			</div>
 			<div class="card-section">
 				<label class="card-label">Время</label>
 				<div class="card-section__svg">
 					<svg-icon src="/assets/Time.svg"></svg-icon>
-					<nz-time-picker [(ngModel)]="time1" nzFormat="HH:mm" nzPlaceHolder="Время" [nzDisabled]="disabled1"></nz-time-picker>
+					<nz-time-picker [(ngModel)]="time1" nzFormat="HH:mm" nzPlaceHolder="Время" [nzDisabled]="disabled1">
+					</nz-time-picker>
 				</div>
 			</div>
-			<div class="card-section bl">					
+			<div class="card-section bl">
 				<label class="card-label">Тренер</label>
-				<div class="card-section__svg">					
+				<div class="card-section__svg">
 					<svg-icon src="/assets/icon-avatar.svg"></svg-icon>
-					<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue ='null' class="svg" nzPlaceHolder="Тренер" [nzDisabled]="disabled1">
+					<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue='null' class="svg" nzPlaceHolder="Тренер"
+						[nzDisabled]="disabled1">
 						<nz-option nzLabel="Сергей Ефремов" nzValue="1"></nz-option>
 						<nz-option nzLabel="Сергей Ефремов" nzValue="2"></nz-option>
 					</nz-select>
 				</div>
 			</div>
-		</div>		
-			<div class="card-section hid">					
-				<label class="card-label">Тренер</label>
-				<div class="card-section__svg">					
-					<svg-icon src="/assets/icon-avatar.svg"></svg-icon>
-					<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue ='null' class="svg" nzPlaceHolder="Тренер" [nzDisabled]="disabled1">
-						<nz-option nzLabel="Сергей Ефремов" nzValue="1"></nz-option>
-						<nz-option nzLabel="Сергей Ефремов" nzValue="2"></nz-option>
-					</nz-select>
-				</div>
+		</div>
+		<div class="card-section hid">
+			<label class="card-label">Тренер</label>
+			<div class="card-section__svg">
+				<svg-icon src="/assets/icon-avatar.svg"></svg-icon>
+				<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue='null' class="svg" nzPlaceHolder="Тренер"
+					[nzDisabled]="disabled1">
+					<nz-option nzLabel="Сергей Ефремов" nzValue="1"></nz-option>
+					<nz-option nzLabel="Сергей Ефремов" nzValue="2"></nz-option>
+				</nz-select>
 			</div>
+		</div>
 	</div>
 	<div class="card-option">
 		<h1>Мероприятие</h1>
@@ -57,37 +61,41 @@
 				<label class="card-label">Дата</label>
 				<div class="card-section__svg">
 					<svg-icon src="/assets/date.svg"></svg-icon>
-					<nz-date-picker [(ngModel)]="date2" (ngModelChange)="onChange($event)" nzPlaceHolder="Дата" nzFormat="d MMMM" [nzDisabled]="disabled3"></nz-date-picker>
-				</div> 
+					<nz-date-picker [(ngModel)]="date2" (ngModelChange)="onChange($event)" nzPlaceHolder="Дата" nzFormat="d MMMM"
+						[nzDisabled]="disabled3"></nz-date-picker>
+				</div>
 			</div>
 			<div class="card-section">
 				<label class="card-label">Время</label>
 				<div class="card-section__svg">
 					<svg-icon src="/assets/Time.svg"></svg-icon>
-					<nz-time-picker [(ngModel)]="time2" nzFormat="HH:mm" nzPlaceHolder="Время" [nzDisabled]="disabled3"></nz-time-picker>
+					<nz-time-picker [(ngModel)]="time2" nzFormat="HH:mm" nzPlaceHolder="Время" [nzDisabled]="disabled3">
+					</nz-time-picker>
 				</div>
 			</div>
-			<div class="card-section bl">					
+			<div class="card-section bl">
 				<label class="card-label">Тренер</label>
-				<div class="card-section__svg">					
+				<div class="card-section__svg">
 					<svg-icon src="/assets/icon-avatar.svg"></svg-icon>
-					<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue ='null' class="svg" nzPlaceHolder="Тренер" [nzDisabled]="disabled3">
+					<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue='null' class="svg" nzPlaceHolder="Тренер"
+						[nzDisabled]="disabled3">
 						<nz-option nzLabel="Сергей Ефремов" nzValue="1"></nz-option>
 						<nz-option nzLabel="Сергей Ефремов" nzValue="2"></nz-option>
 					</nz-select>
 				</div>
 			</div>
 		</div>
-		<div class="card-section hid">					
-				<label class="card-label">Тренер</label>
-				<div class="card-section__svg">					
-					<svg-icon src="/assets/icon-avatar.svg"></svg-icon>
-					<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue ='null' class="svg" nzPlaceHolder="Тренер" [nzDisabled]="disabled1">
-						<nz-option nzLabel="Сергей Ефремов" nzValue="1"></nz-option>
-						<nz-option nzLabel="Сергей Ефремов" nzValue="2"></nz-option>
-					</nz-select>
-				</div>
+		<div class="card-section hid">
+			<label class="card-label">Тренер</label>
+			<div class="card-section__svg">
+				<svg-icon src="/assets/icon-avatar.svg"></svg-icon>
+				<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue='null' class="svg" nzPlaceHolder="Тренер"
+					[nzDisabled]="disabled1">
+					<nz-option nzLabel="Сергей Ефремов" nzValue="1"></nz-option>
+					<nz-option nzLabel="Сергей Ефремов" nzValue="2"></nz-option>
+				</nz-select>
 			</div>
+		</div>
 		<div class="card-option">
 			<h1>Мероприятие</h1>
 			<div class="card-option__label">
@@ -99,8 +107,9 @@
 					<label class="card-label">Дата</label>
 					<div class="card-section__svg">
 						<svg-icon src="/assets/date.svg"></svg-icon>
-						<nz-date-picker [(ngModel)]="date3" (ngModelChange)="onChange($event)" nzPlaceHolder="Дата" nzFormat="d MMMM" disabled></nz-date-picker>
-					</div> 
+						<nz-date-picker [(ngModel)]="date3" (ngModelChange)="onChange($event)" nzPlaceHolder="Дата"
+							nzFormat="d MMMM" disabled></nz-date-picker>
+					</div>
 				</div>
 				<div class="card-section">
 					<label class="card-label">Время</label>
@@ -109,28 +118,28 @@
 						<nz-time-picker [(ngModel)]="time3" nzFormat="HH:mm" nzPlaceHolder="Время" disabled></nz-time-picker>
 					</div>
 				</div>
-				<div class="card-section bl">					
+				<div class="card-section bl">
+					<label class="card-label">Тренер</label>
+					<div class="card-section__svg">
+						<svg-icon src="/assets/icon-avatar.svg"></svg-icon>
+						<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue='null' class="svg" nzPlaceHolder="Тренер"
+							nzDisabled="true">
+							<nz-option nzLabel="Сергей Ефремов" nzValue="1"></nz-option>
+							<nz-option nzLabel="Сергей Ефремов" nzValue="2"></nz-option>
+						</nz-select>
+					</div>
+				</div>
+			</div>
+			<div class="card-section hid">
 				<label class="card-label">Тренер</label>
-				<div class="card-section__svg">					
+				<div class="card-section__svg">
 					<svg-icon src="/assets/icon-avatar.svg"></svg-icon>
-					<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue ='null' class="svg" nzPlaceHolder="Тренер" nzDisabled = "true">
+					<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue='null' class="svg" nzPlaceHolder="Тренер"
+						[nzDisabled]="disabled1">
 						<nz-option nzLabel="Сергей Ефремов" nzValue="1"></nz-option>
 						<nz-option nzLabel="Сергей Ефремов" nzValue="2"></nz-option>
 					</nz-select>
 				</div>
 			</div>
 		</div>
-		<div class="card-section hid">					
-				<label class="card-label">Тренер</label>
-				<div class="card-section__svg">					
-					<svg-icon src="/assets/icon-avatar.svg"></svg-icon>
-					<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue ='null' class="svg" nzPlaceHolder="Тренер" [nzDisabled]="disabled1">
-						<nz-option nzLabel="Сергей Ефремов" nzValue="1"></nz-option>
-						<nz-option nzLabel="Сергей Ефремов" nzValue="2"></nz-option>
-					</nz-select>
-				</div>
-			</div>
 	</div>
-</div>
-
-					
