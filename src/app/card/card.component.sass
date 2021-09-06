@@ -23,7 +23,10 @@
 	line-height: 18px
 
 	color: rgba(0, 0, 0, 0.87)
-
+.hid
+	display: none
+.bl
+	display: block
 .card-option 	
 	padding: 15px 0 0 0
 	& h1
@@ -34,7 +37,7 @@
 		color: rgba(0, 0, 0, 0.54)
 .card-option__label 
 	display: flex
-	
+
 	& h1
 		font-weight: 500
 		font-size: 12px
@@ -70,3 +73,17 @@
 		box-shadow: none
 		border-bottom: 1px solid rgba(0, 0, 0, 0.87) 
 	
+@media (max-width: 480px) 
+	.card-section
+		width: 100px
+		padding: 0
+	.card-content
+		padding: 0 15px
+	.hid
+		display: block		
+		width: 100%
+		padding: 20px 15px
+	.bl
+		display: none
+	.card
+		height: 80%

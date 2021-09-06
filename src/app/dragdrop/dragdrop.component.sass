@@ -112,7 +112,7 @@ input:focus
 	height: 50px
 	&:hover
 		box-sizing: border-box
-		border-bottom: 1px solid rgba(0, 0, 0, 0.38)
+		border-bottom: 2px solid #1071FF
 .dragdrop-label 
 	font-style: normal
 	font-weight: 500
@@ -261,4 +261,12 @@ input:focus
 
 .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) 
 	transition: transform 250ms cubic-bezier(0, 0, 0.2, 1)
-
+.hid
+	display: none
+.br
+	display: block
+@media (max-width: 480px) 
+	.hid
+		display: block
+	.br
+		display: none

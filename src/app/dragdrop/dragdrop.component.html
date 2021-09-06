@@ -92,15 +92,23 @@
 		<div cdkDropList [cdkDropListData]="todo" class="example-list" (cdkDropListDropped)="drop($event)">
   	  <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
 		</div>
+		
+		<div class="example-container hid">
+		<h2>Участники мероприятия</h2>
+		<div class="dragdrop__lable"><label>Все пользователи</label></div>
+			<div cdkDropList [cdkDropListData]="done" class="example-list" (cdkDropListDropped)="drop($event)">
+				<div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+			</div>
+		</div>
 	</div>
-
-
-
-	<div class="example-container">
+	
+	<div class="example-container br">
 	<h2>Участники мероприятия</h2>
 	<div class="dragdrop__lable"><label>Все пользователи</label></div>
 		<div cdkDropList [cdkDropListData]="done" class="example-list" (cdkDropListDropped)="drop($event)">
 			<div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
 		</div>
 	</div>
+
+
 </div>

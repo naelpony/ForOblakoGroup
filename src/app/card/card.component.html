@@ -24,7 +24,7 @@
 					<nz-time-picker [(ngModel)]="time1" nzFormat="HH:mm" nzPlaceHolder="Время" [nzDisabled]="disabled1"></nz-time-picker>
 				</div>
 			</div>
-			<div class="card-section">					
+			<div class="card-section bl">					
 				<label class="card-label">Тренер</label>
 				<div class="card-section__svg">					
 					<svg-icon src="/assets/icon-avatar.svg"></svg-icon>
@@ -34,7 +34,17 @@
 					</nz-select>
 				</div>
 			</div>
-		</div>
+		</div>		
+			<div class="card-section hid">					
+				<label class="card-label">Тренер</label>
+				<div class="card-section__svg">					
+					<svg-icon src="/assets/icon-avatar.svg"></svg-icon>
+					<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue ='null' class="svg" nzPlaceHolder="Тренер" [nzDisabled]="disabled1">
+						<nz-option nzLabel="Сергей Ефремов" nzValue="1"></nz-option>
+						<nz-option nzLabel="Сергей Ефремов" nzValue="2"></nz-option>
+					</nz-select>
+				</div>
+			</div>
 	</div>
 	<div class="card-option">
 		<h1>Мероприятие</h1>
@@ -57,7 +67,7 @@
 					<nz-time-picker [(ngModel)]="time2" nzFormat="HH:mm" nzPlaceHolder="Время" [nzDisabled]="disabled3"></nz-time-picker>
 				</div>
 			</div>
-			<div class="card-section">					
+			<div class="card-section bl">					
 				<label class="card-label">Тренер</label>
 				<div class="card-section__svg">					
 					<svg-icon src="/assets/icon-avatar.svg"></svg-icon>
@@ -68,6 +78,16 @@
 				</div>
 			</div>
 		</div>
+		<div class="card-section hid">					
+				<label class="card-label">Тренер</label>
+				<div class="card-section__svg">					
+					<svg-icon src="/assets/icon-avatar.svg"></svg-icon>
+					<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue ='null' class="svg" nzPlaceHolder="Тренер" [nzDisabled]="disabled1">
+						<nz-option nzLabel="Сергей Ефремов" nzValue="1"></nz-option>
+						<nz-option nzLabel="Сергей Ефремов" nzValue="2"></nz-option>
+					</nz-select>
+				</div>
+			</div>
 		<div class="card-option">
 			<h1>Мероприятие</h1>
 			<div class="card-option__label">
@@ -89,7 +109,7 @@
 						<nz-time-picker [(ngModel)]="time3" nzFormat="HH:mm" nzPlaceHolder="Время" disabled></nz-time-picker>
 					</div>
 				</div>
-				<div class="card-section">					
+				<div class="card-section bl">					
 				<label class="card-label">Тренер</label>
 				<div class="card-section__svg">					
 					<svg-icon src="/assets/icon-avatar.svg"></svg-icon>
@@ -100,6 +120,16 @@
 				</div>
 			</div>
 		</div>
+		<div class="card-section hid">					
+				<label class="card-label">Тренер</label>
+				<div class="card-section__svg">					
+					<svg-icon src="/assets/icon-avatar.svg"></svg-icon>
+					<nz-select nzShowSearch nzAllowClear nzBorderless selectedValue ='null' class="svg" nzPlaceHolder="Тренер" [nzDisabled]="disabled1">
+						<nz-option nzLabel="Сергей Ефремов" nzValue="1"></nz-option>
+						<nz-option nzLabel="Сергей Ефремов" nzValue="2"></nz-option>
+					</nz-select>
+				</div>
+			</div>
 	</div>
 </div>
 
